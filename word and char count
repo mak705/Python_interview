@@ -1,0 +1,51 @@
+Char count
+def char_frequency(str1):
+    dict = {}
+    for n in str1:
+        keys = dict.keys()
+        if n in keys:
+            dict[n] += 1
+        else:
+            dict[n] = 1
+    return dict
+print(char_frequency('google.com'))
+{'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
+
+def word_count1(str):
+    counts = dict()
+    words = list(str)
+    for word in words:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+
+    return counts
+word_count1('google.com')
+{'.': 1, 'c': 1, 'e': 1, 'g': 2, 'l': 1, 'm': 1, 'o': 3}
+
+counts = dict()
+words = 'google.com'
+for word in words:
+    if word in counts:
+         counts[word] += 1
+    else:
+         counts[word] = 1
+print (counts)
+{'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
+
+Word count
+def word_count(str):
+    counts = dict()
+    words = str.split()
+
+    for word in words:
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+
+    return counts
+
+print( word_count('The man is awesome, What a man he is'))
+{'the': 1, 'man': 2, 'is': 2, 'awesome,': 1, 'What': 1, 'a': 1, 'he': 1}
