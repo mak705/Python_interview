@@ -6,5 +6,35 @@ class MyTests(unittest.TestCase):
         self.assertTrue(1==1)
         ##False
         self.assertTrue(1==2)
+        
+###########################################End#####################       
+        
+import unittest
+
+
+class Testing(unittest.TestCase):
+    def test_string(self):
+        a = 'some'
+        b = 'some'
+        self.assertEqual(a, b)
+
+    def test_boolean(self):
+        a = True
+        b = True
+        self.assertEqual(a, b)
+
+if __name__ == '__main__':
+    unittest.main()
+    
+mak@mak-Aspire-A515-51G:/tmp$ python3.6 -m unittest -v s.Testing
+test_boolean (s.Testing) ... ok
+test_string (s.Testing) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+#############################
+
 
         
