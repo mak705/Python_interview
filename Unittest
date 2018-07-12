@@ -1,0 +1,10 @@
+import unittest
+class MyTests(unittest.TestCase):
+    def test_my_function(self):
+        self.assertTrue(True)
+        #True
+        self.assertTrue(1==1)
+        ##False
+        self.assertTrue(1==2)
+
+        
