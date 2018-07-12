@@ -1,0 +1,55 @@
+CREATE TABLE Users(
+ name VARCHAR(128),
+ email VARCHAR(128)
+ )
+
+INSERT INTO Users(name,email) VALUES(Sh,'sh@mak')
+CREATE TABLE Ages ( 
+  name VARCHAR(128), 
+  age INTEGER
+)
+
+DELETE FROM Ages;
+INSERT INTO Ages (name, age) VALUES ('Johannes', 31);
+INSERT INTO Ages (name, age) VALUES ('Jole', 13);
+INSERT INTO Ages (name, age) VALUES ('Preet', 34);
+INSERT INTO Ages (name, age) VALUES ('Arrham', 33);
+INSERT INTO Ages (name, age) VALUES ('Rudi', 34);
+INSERT INTO Ages (name, age) VALUES ('Mabruka', 24);
+
+SELECT hex(name || age) AS X FROM Ages ORDER BY X
+
+CREATE TABLE Album ( id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+artist_id INTEGER,
+title TEXT )
+
+CREATE TABLE Genre ( id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+name TEXT )
+
+CREATE TABLE Track ( id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+album_id INTEGER,
+genre_id INTEGER
+title TEXT,
+len INTEGER, rating INTEGER, count INTEGER)
+
+Insert into Artist(name) values ('led zeplin')
+Insert into Genre(name) values ('led Rock')
+
+Insert update Album(title,artist_id) values ('IV',1)
+Insert into Album(title,artist_id) values ('Who made who',I)
+
+Insert into Track(title,rating,len,count,album_id,genre_id)
+values('BlackDog',5,297,0,2,1);
+Insert into Track(title,rating,len,count,album_id,genre_id)
+values('Stairway',5,482,0,2,1);
+Insert into Track(title,rating,len,count,album_id,genre_id)
+values('About to Rock',5,313,0,1,2);
+Insert into Track(title,rating,len,count,album_id,genre_id)
+values('Stairway',5,207,0,1,2)
+
+Alter TABLE Track ADD title TEXT;
+
+select Album.title, Artist.name from Album join Artist on Album.artist_id = Artist.id
+select Album.title, Album.artist_id, Artist.id, Artist.name from Album join Artist on Album.artist_id = Artist.id
+select Track.title, Genre.name from Track join Genre on Track.Genre_id = Genre.id
+select Track.title, Artist.name, Album.title, Genre.name from Track join Genre join Album Join Artist on Track.Genre_id = Genre.id and Track.album_id = Album.id and Album.artsit_id = Artist.id

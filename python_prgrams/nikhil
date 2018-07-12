@@ -1,0 +1,18 @@
+bookprice = 25
+discount_price = 5
+print ("Enter number of books")
+number = int(input())
+print ("Total price is %f"  % ( number*(bookprice - discount_price)))
+
+--------------------------------------------------------------------------
+
+print ("Enter First number")
+number1= int(input())
+print ("Enter Second number")
+number2 = int(input())
+print (number1+number2)
+print (number1*number2)
+print(number1 > number2)
+print ("If number1 is greater than number2 output is  %s" %(number1 > number2))
+print ("If number2 is greater than number1 output is %s" %(number1 < number2))
+===============================================================================

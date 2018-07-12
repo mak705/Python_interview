@@ -1,0 +1,2 @@
+echo "foo foo quux labs foo bar quux" | /home/makbul/testpython/map.py|sort -k1  | /home/makbul/testpython/red.py 
+

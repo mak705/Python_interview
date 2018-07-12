@@ -1,0 +1,5 @@
+cars = 100
+print "There are", cars, "cars available."
+print "There are %d cars available." % cars
+
+

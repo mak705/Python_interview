@@ -1,0 +1,11 @@
+** exponential (raise to the power)
+~+- complementary, unary plus, unary minus
+*/%// multiply, divide, modulo, floor division
++- addition and substration
+>> << right and left bitwise shift
+& Bitwise 'AND'
+^| Bitwise exclusive OR and regular 'OR'
+<= < > >=  comparison operatores
+is is not identity operators
+in not in Membership operators
+not or and Logical operators

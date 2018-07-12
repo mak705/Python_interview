@@ -1,0 +1,142 @@
+Boolean operations
+>>> 2==3
+False
+>>> 2==2
+True
+
+>>> 1!=1
+False
+
+>>> 2>3
+False
+
+==================================
+
+if statement: 
+
+#num = 12
+num = raw_input("Enter the number")
+if num > 5:
+ print("Bigger than 5")
+ if num <= 47:
+  print("Between 5 and 47")
+
+======================================
+num = 7
+if num > 3:
+ print("3")
+ if num >= 5:
+  print("5")
+  if num == 7:
+   print("7")
+
+=====================================
+
+Else
+x=4
+if x==5:
+ print("Yes")
+else:
+  print("No")
+===============================
+if 1 + 1 == 2:
+ if 2*2==8:
+  print("HI")
+ else:
+  print("else")
+=======================================
+
+nested else
+num = 7
+if num == 5:
+ print("Hi I am 5")
+else:
+ if num==11:
+  print("number is 11")
+ else:
+  if num == 7:
+   print("HI i am 7")
+  else:
+   print("Hi i am infinte")
+
+=================================
+Elif
+num = 7
+num = 7
+if num == 5:
+ print("HI I AM 5")
+elif num == 11:
+  print("Number is 11")
+elif num == 7:
+  print ("i am 7")
+else:
+  print("not 5 7 11")
+=========================================
+def test(n):
+    if n == 0:
+        print("None")
+    elif n < 0:
+        print("Low")
+    else:
+        # Handle values greater than zero.
+        if n > 100:
+            print("Out of range")
+        else:
+            print("High")
+
+test(-1)
+test(0)
+test(1)
+test(1000)
+=============================================
+birds = {"parakeet": 1, "parrot": 2}
+
+if "parrot" in birds:
+    print("Found")
+===============================================
+number = 1
+
+# See if number is not equal to 2.
+if not number == 2:
+    print("True")
+
+birds = {"cormorant" : 1, "cardinal" : 2}
+
+# See if string not in collection.
+if "automobile" not in birds:
+    print("Not found")
+=================================================
+a = 1
+b = 2
+c = 3
+
+# Store result in expression.
+all = a == 1 and b == 2 and c == 3
+
+# Test variable.
+if all:
+    print(1)
+
+# Use it again.
+if all:
+    print(2)
+
+--------------------------------------------------
+def test(x):
+    # Test x with tuple syntax.
+    if x in (0, 2, 4):
+        print("Match")
+    else:
+        print("Nope")
+
+test(0)
+test(1)
+test(2)
+================================================
+
+
+
+
+
+
+
