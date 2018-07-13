@@ -8,7 +8,7 @@ class MyTests(unittest.TestCase):
         self.assertTrue(1==2)
         
 ###########################################End#####################       
-        
+ >> s.py       
 import unittest
 
 
