@@ -1,0 +1,83 @@
+https://www.pythoncentral.io/how-to-create-a-python-package/
+
+
+When you've got a large number of Python classes (or "modules"), you'll want to organize them into packages. When the number of modules (simply stated, a module might be just a file containing some classes) in any project grows significantly, it is wiser to organize them into packages – that is, placing functionally similar modules/classes in the same directory. This article will show you how to create a Python package.
+Steps to Create a Python Package
+Working with Python packages is really simple. All you need to do is:
+
+Create a directory and give it your package's name.
+Put your classes in it.
+Create a __init__.py file in the directory
+That's all! In order to create a Python package, it is very easy. The __init__.py file is necessary because with this file, Python will know that this directory is a Python package directory other than an ordinary directory (or folder – whatever you want to call it). Anyway, it is in this file where we'll write some import statements to import classes from our brand new package.
+
+Example On How to Create a Python Package
+In this tutorial, we will create an Animals package – which simply contains two module files named Mammals and Birds, containing the Mammals and Birds classes, respectively.
+
+Step 1: Create the Package Directory
+So, first we create a directory named Animals.
+
+Step 2: Add Classes
+Now, we create the two classes for our package. First, create a file named Mammals.py inside the Animals directory and put the following code in it:
+
+class Mammals:
+    def __init__(self):
+        ''' Constructor for this class. '''
+        # Create some member animals
+        self.members = ['Tiger', 'Elephant', 'Wild Cat']
+ 
+ 
+    def printMembers(self):
+        print('Printing members of the Mammals class')
+        for member in self.members:
+            print('\t%s ' % member)
+The code is pretty much self-explanatory! The class has a property named members – which is a list of some mammals we might be interested in. It also has a method named printMembers which simply prints the list of mammals of this class! Remember, when you create a Python package, all classes must be capable of being imported, and won't be executed directly.
+
+Next we create another class named Birds. Create a file named Birds.py inside the Animals directory and put the following code in it:
+
+
+class Birds:
+    def __init__(self):
+        ''' Constructor for this class. '''
+        # Create some member animals
+        self.members = ['Sparrow', 'Robin', 'Duck']
+ 
+ 
+    def printMembers(self):
+        print('Printing members of the Birds class')
+        for member in self.members:
+           print('\t%s ' % member)
+This code is similar to the code we presented for the Mammals class.
+
+Step 3: Add the __init__.py File
+Finally, we create a file named __init__.py inside the Animals directory and put the following code in it:
+
+from Animals.Mammals import Mammals
+from Animals.Birds import Birds
+That's it! That's all there is to it when you create a Python package. For testing, we create a simple file named test.py in the same directory where the Animals directory is located. We place the following code in the test.py file:
+
+# Import classes from your brand new package
+from Animals import Mammals
+from Animals import Birds
+ 
+# Create an object of Mammals class & call a method of it
+myMammal = Mammals()
+myMammal.printMembers()
+ 
+# Create an object of Birds class & call a method of it
+myBird = Birds()
+myBird.printMembers()
+
+
+>>mak@mak-Aspire-A515-51G:~/test$ python test.py 
+Printing members of the Mammals class
+	Tiger 
+	Elephant 
+	Wild Cat 
+Printing members of the Birds class
+	Sparrow 
+	Robin 
+	Duck 
+
+
+
+
