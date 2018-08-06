@@ -89,8 +89,6 @@ godson.add_contact("Dad","+2347085734411")
 print(godson.get_contact_number("Dad")) ##+2347085734411
     
 #####Myinfo
-my_info.pyPython
-
 class MyInfo():
     
     def __init__(self,name,age):
@@ -112,53 +110,8 @@ def main():
     print(data1.__dict__)
     
 main()
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-class MyInfo():
-    
-    def __init__(self,name,age):
-        
-        self.name=name
-        self.age=age
-        
-        print(self.name,"is",self.age,
-              "years old.") 
-        
-    def getStatus(self):
-        
-        self.status="Single"
-        print(self.name,"is",self.status)
-        
-def main():
-    data1=MyInfo("Godson",21)
-    data1.getStatus()
-    print(data1.__dict__)
-    
-main()
-
 ##Godson is 21 years old.
- 
 ##Godson is Single
- 
 ##{'name': 'Godson', 'age': 21, 'status': 'Single'}
 
 ########Buy sell pgm
@@ -218,3 +171,95 @@ bob.get_job()
 bob.bmi()
 #24.7
  
+##bank
+class Customer(object):
+    """A customer of ABC Bank with a checking account. Customers have the
+    following properties:
+
+    Attributes:
+        name: A string representing the customer's name.
+        balance: A float tracking the current balance of the customer's account.
+    """
+
+    def __init__(self, name):
+        """Return a Customer object whose name is *name*.""" 
+        self.name = name
+
+    def set_balance(self, balance=0.0):
+        """Set the customer's starting balance."""
+        self.balance = balance
+
+    def withdraw(self, amount):
+        """Return the balance remaining after withdrawing *amount*
+        dollars."""
+        if amount > self.balance:
+            raise RuntimeError('Amount greater than available balance.')
+        self.balance -= amount
+        return self.balance
+
+    def deposit(self, amount):
+        """Return the balance remaining after depositing *amount*
+        dollars."""
+        self.balance += amount
+        return self.balance
+jeff = Customer('Jeff Knupp', 1000.0)
+jeff.set_balance(1000.0)
+jeff.withdraw(100.0)
+###Bank
+
+class Account(object):
+    def __init__(self, holder, number, balance,credit_line=1500): 
+        self.Holder = holder 
+        self.Number = number 
+        self.Balance = balance
+        self.CreditLine = credit_line
+
+    def deposit(self, amount): 
+        self.Balance = amount
+
+    def withdraw(self, amount): 
+        if(self.Balance - amount < -self.CreditLine):
+            # coverage insufficient
+            return False  
+        else: 
+            self.Balance -= amount 
+            return True
+
+    def balance(self): 
+        return self.Balance
+
+    def transfer(self, target, amount):
+	if(self.Balance - amount < -self.CreditLine):
+            # coverage insufficient
+            return False  
+        else: 
+            self.Balance -= amount 
+            target.Balance += amount 
+            return True
+k = Account.Account("Guido",345267,10009.78)
+k.balance()
+#10009.780000000001
+k2 = Account.Account("Sven",345289,3800.03)
+k2.balance()
+#3800.0300000000002
+k.transfer(k2,1000)
+#True
+k2.balance()
+#4800.0300000000007
+k.balance()
+#9009.7800000000007
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
