@@ -1,0 +1,220 @@
+#pgm1
+import random
+class Monopoly():
+    """A simulation of the game of monopoly"""
+    
+    def rollDice(self):
+        
+        self.die1=random.randint(1,6)
+        self.die2=random.randint(1,6)
+        self.steps= self.die1 + self.die2
+        print ("Move",self.steps,"steps on the board.")
+        
+player1= Monopoly()
+player2= Monopoly()
+    
+def playGame():
+       
+    player1.rollDice()
+    player2.rollDice()
+    
+def attribute():
+    """Returns the atrributes and
+    values of the attribute in the
+    class, Monopoly"""
+    
+    print(player1.__dict__)
+    
+playGame()
+attribute()
+###################################
+#pgm2
+class Person:
+    def __init__(self, first_name, email):
+        self.first_name = first_name
+        self._email = email
+
+    def update_email(self, new_email):
+        self._email = new_email
+
+    def email(self):
+        return self._email
+###############        
+ #inheritance
+ 
+class Car:
+    def __init__(self, number_of_wheels, seating_capacity, maximum_velocity):
+        self.number_of_wheels = number_of_wheels
+        self.seating_capacity = seating_capacity
+        self.maximum_velocity = maximum_velocity
+  
+my_car = Car(4, 5, 250)
+print(my_car.number_of_wheels)
+print(my_car.seating_capacity)
+print(my_car.maximum_velocity)
+
+class ElectricCar(Car):
+    def __init__(self, number_of_wheels, seating_capacity, maximum_velocity):
+        Car.__init__(self, number_of_wheels, seating_capacity, maximum_velocity)
+
+my_electric_car = ElectricCar(4, 5, 250)
+print(my_electric_car.number_of_wheels) # => 4
+print(my_electric_car.seating_capacity) # => 5
+print(my_electric_car.maximum_velocity) # => 250
+#####
+#phone book
+class Phone_book():
+    
+    def __init__(self):
+        self.contact_details={}
+        
+    def add_contact(self,name,number):
+        self.contact_details[name]=number
+        
+    def remove_contact(self,name):
+        if name in self.contact_details:
+            del self.contact_details[name]
+        else:
+            print("Contact not available")
+    
+    def get_contact_number(self,name):
+        if name in self.contact_details:
+            return self.contact_details.get(name,None)
+        else:
+            print("Contact not available")
+    
+godson = Phone_book()
+godson.add_contact("Dad","+2347085734411")
+
+print(godson.get_contact_number("Dad")) ##+2347085734411
+    
+#####Myinfo
+my_info.pyPython
+
+class MyInfo():
+    
+    def __init__(self,name,age):
+        
+        self.name=name
+        self.age=age
+        
+        print(self.name,"is",self.age,
+              "years old.") 
+        
+    def getStatus(self):
+        
+        self.status="Single"
+        print(self.name,"is",self.status)
+        
+def main():
+    data1=MyInfo("Godson",21)
+    data1.getStatus()
+    print(data1.__dict__)
+    
+main()
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+class MyInfo():
+    
+    def __init__(self,name,age):
+        
+        self.name=name
+        self.age=age
+        
+        print(self.name,"is",self.age,
+              "years old.") 
+        
+    def getStatus(self):
+        
+        self.status="Single"
+        print(self.name,"is",self.status)
+        
+def main():
+    data1=MyInfo("Godson",21)
+    data1.getStatus()
+    print(data1.__dict__)
+    
+main()
+
+##Godson is 21 years old.
+ 
+##Godson is Single
+ 
+##{'name': 'Godson', 'age': 21, 'status': 'Single'}
+
+########Buy sell pgm
+class Bitcoin():
+    
+    def __init__(self):
+        self.btc_value = 100
+        self.my_btcs = 0
+        
+    def buy_bitcoin(self,amount):
+        self.my_btcs += amount / self.btc_value
+        
+    def sell_bitcoin(self,btc):
+        if btc <= self.my_btcs:
+            self.my_btcs -= btc
+        else:
+            print("You don't have enough Bitcoins to sell")
+    
+    def available_bitcoin(self):
+        return self.my_btcs
+    
+    def __str__(self):
+        return "You have " + str(format(self.my_btcs,",.2f")) + " Bitcoins"
+my_wallet = Bitcoin()
+print("1 bitcoin sells at $100")
+purchase = float(input("How much cash do you've to buy:"))
+my_wallet.buy_bitcoin(purchase)
+print(my_wallet)
+print("Do you want to send your bitcoin?")
+sell= float(input("How many bitcoins do you want to sell:"))
+my_wallet.sell_bitcoin(sell)
+print(my_wallet) 
+#1 bitcoin sells at $100
+#How much cash do you've to buy:500
+#You have 5.00 Bitcoins
+#Do you want to send your bitcoin?
+#How many bitcoins do you want to sell:5
+#You have 0.00 Bitcoins
+
+#####Basic function call
+class Person(object):
+    def __init__(self, name, age, height, weight, gender, job):
+        self.name = name
+        self.age = age
+        self.height = height
+        self.weight = weight
+        self.gender = gender
+        self.job = job
+bob = Person("Bob", 30, 180, 80, "Male", "Professional Awesome Programmer Guy")
+bob.age #30
+    def get_job(self):
+      return self.job
+bob.get_job()
+#Professional Awesome Programmer Guy
+    def bmi(self):
+      return (self.weight / ((self.height / 100) ** 2))
+bob.bmi()
+#24.7
+ 
