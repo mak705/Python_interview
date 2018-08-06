@@ -249,8 +249,29 @@ k2.balance()
 k.balance()
 #9009.7800000000007
             
-            
-            
+###counter
+class Account(object): 
+    counter = 0
+    def __init__(self, holder, number, balance,credit_line=1500): 
+        Account.counter += 1
+        self.__Holder = holder 
+        self.__Number = number 
+        self.__Balance = balance
+        self.__CreditLine = credit_line
+    def __del__(self):
+        Account.counter -= 1
+a1 = Account("Homer Simpson", 2893002, 2325.21)
+Account.counter
+#1
+a2 = Account("Fred Flintstone", 2894117, 755.32)
+Account.counter
+#2
+a3 = Account("Bill Gates", 2895007, 5234.32)
+Account.counter
+#3
+del a3
+Account.counter
+#2
             
             
             
