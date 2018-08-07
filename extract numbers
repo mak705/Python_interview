@@ -9,3 +9,17 @@ for  i in list_1:
     if  isinstance(i,(int,float)):
         new.append(i)
 new
+
+list_d = ["Justin", "Apple", 884484, 3231, 548499484, "Another", 390122, 448468484]
+temp_list = []
+liste = []
+x = 0
+for number in list_d:
+    if isinstance(number, int):
+        liste.append(number)
+    else:
+        temp_list.append(list_d[x])
+    x += 1
+
+temp_list
+#['Justin', 'Apple', 'Another']
