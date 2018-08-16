@@ -23,3 +23,15 @@ for number in list_d:
 
 temp_list
 #['Justin', 'Apple', 'Another']
+
+##################################
+lines = "hello 12 hi 89 1"
+
+import re
+output = []
+s = lines.split()
+for line in s:
+        match = re.search(r'\d+.?\d*', line)
+        if match:
+            output.append(float(match.group()))
+print (output)
