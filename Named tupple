@@ -1,0 +1,18 @@
+import collections 
+
+# Declaring namedtuple() 
+dimensions = collections.namedtuple('colors',['blue','red','yellow']) 
+S = dimensions('5','6','8')
+# Access using index 
+print ("The dimension of red using index is : ",end ="") 
+print (S[1]) 
+# Access using name  
+print ("The dimension of red using keyname is : ",end ="") 
+print (S.red) 
+# Access using getattr() 
+print ("The dimension of red  using getattr() is : ",end ="") 
+print (getattr(S,'red')) 
+#Python supports a type of container like dictionaries called “namedtuples()” present in module, “collection“. 
+#Like dictionaries they contain keys that are hashed to a particular value. 
+#But on contrary, it supports both access from key value and iteration, the functionality that dictionaries lack.
+#https://www.geeksforgeeks.org/namedtuple-in-python/
