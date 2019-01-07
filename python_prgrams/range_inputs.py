@@ -31,4 +31,4 @@ print('\n'.join([a for a,b in sorted(a) if b == second_highest]))
 c
 
 second_highest
-3.0
+3.0 
