@@ -1,0 +1,3 @@
+192.168.10.20 - - [18/Jul/2017:08:41:37 +0000] "DELETE /search/tag/list HTTP/1.0" 200 5042 "http://cooper.com/homepage/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/5342 (KHTML, like Gecko) Chrome/14.0.870.0 Safari/5342"
+10.30.24.3 - - [18/Jul/2017:08:45:15 +0000] "DELETE /search/tag/list HTTP/1.0" 200 4939 "http://www.cole-brown.net/category/main/list/privacy/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/5322 (KHTML, like Gecko) Chrome/14.0.843.0 Safari/5322"
+98.5.45.3 - - [18/Jul/2017:08:45:49 +0000] "GET /apps/cart.jsp?appID=8471 HTTP/1.0" 200 4958 "http://knight-chase.com/post.jsp" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_7_3; rv:1.9.6.20) Gecko/2013-11-03 17:44:01 Firefox/3.8"
